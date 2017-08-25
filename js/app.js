@@ -3,9 +3,7 @@ $(document).ready(function(){
     // burger menu
 
     $('.hamburger').on('click', function(e) {
-      // Prevent link from jumping to the top of the page
       e.preventDefault();
-      // If menu is already showing, slide it up. Otherwise, slide it down.
       $('.menu').toggleClass('slide-down');
     });
 
@@ -172,22 +170,18 @@ function initMap(){
   }
   ];
 
-  // Loop through markers
   for(var i = 0;i < markers.length;i++){
     // Add marker
     addMarker(markers[i]);
   }
 
-  // Add Marker Function
   function addMarker(props){
     var marker = new google.maps.Marker({
       position:props.coords,
       map:map,
-      //icon:props.iconImage
     });
 
 
-    // Check content
     if(props.content){
       var infoWindow = new google.maps.InfoWindow({
         content:props.content
