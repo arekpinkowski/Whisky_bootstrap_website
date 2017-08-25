@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Vollkor|Cinzel');
+
+body{
+    font-family: 'Francois One' !important;
+}
+
+/*Header*/
+header {
+	background-color: #17202F;
+}
+
+header>nav>ul {
+	margin: 0;
+	padding: 0;
+}
+
+header>nav>ul>li {
+	width: 120px;
+	display: inline-block;
+	text-align: center;
+}
+
+#logo{
+    float: right;
+    color: #B55410;
+}
+header>nav>ul>li>a, #logo {
+	line-height: 70px;
+	text-transform: uppercase;
+	transition: .6s;
+	font-weight: 900;
+}
+
+header>nav>ul>li>a{
+	color: #ffffff;
+}
+
+
+header>nav>ul>li:hover {
+	background-color: #B55410;
+}
+
+header>nav>ul>li:hover>a {
+	color: #382C2E;
+    text-decoration: none;
+}
+
+.navbar{
+  margin-bottom:0;
+  border-radius:0;
+}
+
+/*JUMBOTRON*/
+
+#title{
+    color: #17202F;
+}
+
+.jumb{
+background: url(w1.png);
+background-size: cover;
+background-position: 50% 50%;
+min-height: 400px;
+margin-bottom: 0px !important
+}
+
+.jumb>div>a, .jumb>div>p{
+    margin-top: 30px;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #B55410;
+    border-color: #B55410;
+}
+/*LOCKQUOTE*/
+
+.quote {
+    background-color: #17202F;
+    padding: 40px;
+    color: white;
+    font-family: 'Cinzel', cursive;
+}
+
+
+/*HISTORY*/
+
+.about{
+    background-color:#B55410;;
+    color: #17202F;
+    padding: 40px;
+}
+
+#history{
+    padding-bottom: 30px;
+}
+
+#history>div>p{
+    font-family: "Vollkor";
+    padding-top: 15px;
+}
+
+
+/*CONTENT*/
+
+.content{
+    background-color: #d8ede6;
+    padding: 30px;
+}
+.content>div>h1, .content>div>div>div>h2, .content>div>div>div>p{
+    color: #17202F;
+}
+
+.content>div>div>div>img{
+    padding: 15px;
+    border: solid 1px #B55410;
+    background-color: #B55410;
+}
+
+.content>div>div>div>img:hover {
+	background-color: #17202F;
+    border: solid 1px #17202F;
+    transition: transform 1.2s;
+    transform: scale(1.05);
+}
+
+.content>div>h1{
+    padding-bottom: 15px;
+}
+.content>div>div>div>h2{
+    padding-bottom: 25px;
+}
+
+.content>div>div>div>p{
+    padding-top: 25px;
+}
+
+
+
+/*MAPS*/
+
+.location{
+    background-color: #17202F;
+    padding: 40px;
+}
+
+.location>div>div>h2{
+    padding-bottom: 30px;
+    color: #B55410;
+}
+.location>div>div>ul>li{
+    color:#d8ede6;
+    padding-bottom: 20px;
+}
+
+#map {
+ height: 400px;
+ width: 100%;
+ align-items: center;
+}
+
+/*FORMS*/
+
+.form{
+    background-color: #d8ede6;
+    padding: 40px;
+}
+
+/*FOOTER*/
+
+.footer{
+    background-color: #17202F;
+    padding: 20px;
+}
+
+.footer>div>div>p{
+    color: #B55410;
+
+}
+
+@media (max-width: 768px) {
+
+    body {
+      padding:0;
+    }
+
+    .container {
+      padding:0;
+      margin:0;
+    }
+
+    .hamburger {
+        padding: 15px;
+    }
+
+    .line {
+      border-bottom: 4px solid #bbb;
+      width: 35px;
+      margin-bottom: 6px;
+    }
+
+    header>nav>ul>li {
+      width: 100%;
+    }
+
+    .menu {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s linear;
+    }
+
+    .slide-down {
+      height: auto;
+    }
+
+    .img-circle {
+        max-width: 400px !important;
+    }
+}
+
+/*maps*/
+
+
+
+/*background-color: #C8822C;*/
+/* footer spany: pierwsze dwa - bold, drugi padding left! footer cały padding button!
