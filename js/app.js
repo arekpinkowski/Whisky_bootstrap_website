@@ -35,6 +35,58 @@ $('html, body').animate({
 });
 function initMap(){
 
+    // Map options
+    var options = {
+      zoom:6,
+      center:{lat: 56.7682, lng: -3.8434},
+    }
+
+    // New map
+    var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+    var markers = [
+      {
+        coords:{lat:55.6355,lng:-6.1262},
+        content:'<p>Lagavulin distillery<p>'
+      },
+      {
+        coords:{lat:57.4749,lng:-3.2170},
+        content:'<p>Aberlour distillery<p>'
+      },
+      {
+        coords:{lat:57.4548,lng:-3.1287},
+        content:'<p>Glenfiddich distillery</p>'
+    },
+    {
+      coords:{lat:55.6421,lng:-6.1121},
+      content:'<p>Ardbeg distillery</p>'
+    }
+    ];
+
+    for(var i = 0;i < markers.length;i++){
+      // Add marker
+      addMarker(markers[i]);
+    }
+
+    function addMarker(props){
+      var marker = new google.maps.Marker({
+        position:props.coords,
+        map:map,
+      });
+
+
+      if(props.content){
+        var infoWindow = new google.maps.InfoWindow({
+          content:props.content
+        });
+
+        marker.addListener('click', function(){
+          infoWindow.open(map, marker);
+        });
+      }
+    }
+
     var styledMapType = new google.maps.StyledMapType(
         [
 {
@@ -141,57 +193,7 @@ function initMap(){
 }
 ],
         {name: 'Styled Map'});
-  // Map options
-  var options = {
-    zoom:6,
-    center:{lat: 56.7682, lng: -3.8434},
-  }
 
-  // New map
-  var map = new google.maps.Map(document.getElementById('map'), options);
-
-
-  var markers = [
-    {
-      coords:{lat:55.6355,lng:-6.1262},
-      content:'<p>Lagavulin distillery<p>'
-    },
-    {
-      coords:{lat:57.4749,lng:-3.2170},
-      content:'<p>Aberlour distillery<p>'
-    },
-    {
-      coords:{lat:57.4548,lng:-3.1287},
-      content:'<p>Glenfiddich distillery</p>'
-  },
-  {
-    coords:{lat:55.6421,lng:-6.1121},
-    content:'<p>Ardbeg distillery</p>'
-  }
-  ];
-
-  for(var i = 0;i < markers.length;i++){
-    // Add marker
-    addMarker(markers[i]);
-  }
-
-  function addMarker(props){
-    var marker = new google.maps.Marker({
-      position:props.coords,
-      map:map,
-    });
-
-
-    if(props.content){
-      var infoWindow = new google.maps.InfoWindow({
-        content:props.content
-      });
-
-      marker.addListener('click', function(){
-        infoWindow.open(map, marker);
-      });
-    }
-  }
   map.mapTypes.set('styled_map', styledMapType);
   map.setMapTypeId('styled_map');
 }
