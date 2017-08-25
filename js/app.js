@@ -33,7 +33,7 @@ $('html, body').animate({
 })
 
 });
-function initMap(){
+function initMap(callback){
 
     // Map options
     var options = {
@@ -196,4 +196,6 @@ function initMap(){
 
   map.mapTypes.set('styled_map', styledMapType);
   map.setMapTypeId('styled_map');
+
+  callback()
 }
