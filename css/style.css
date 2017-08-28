@@ -221,7 +221,8 @@ margin-bottom: 0px !important
 }
 
 .location, .content, .about, .form{
-    padding:0;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .form{
