@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Francois+One|Vollkor|Cinzel');
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Merriweather|Cinzel');
 
 body{
     font-family: 'Francois One' !important;
@@ -99,7 +99,7 @@ margin-bottom: 0px !important
 }
 
 #history>div>p{
-    font-family: "Vollkor";
+    font-family: "Merriweather";
     padding-top: 15px;
 }
 
